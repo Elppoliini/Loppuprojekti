@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Loppu projekti</string>
+    <string-array name="Treenimuoto">
+        <item>yleinen</item>
+        <item>jalkapäivä</item>
+        <item>yläkroppa</item>
+        <item>lenkkeily</item>
+
+    </string-array>
+</resources>
