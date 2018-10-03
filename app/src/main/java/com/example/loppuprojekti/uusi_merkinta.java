@@ -15,7 +15,7 @@ import java.util.Scanner;
 public class uusi_merkinta extends AppCompatActivity {
 
     Scanner lukija = new Scanner(System.in);
-
+    String TAG = "com.example.loppuprojekti";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,18 +23,17 @@ public class uusi_merkinta extends AppCompatActivity {
 
         Spinner treeniTyyppi = findViewById(R.id.treeniTyyppiSpinner);
 
-        treeniTyyppi.setAdapter(new ArrayAdapter<Treenit> Treenilista.getInstance().getTreenilista());
+        treeniTyyppi.setAdapter(new ArrayAdapter<Treenit>
+                (this, android.R.layout.simple_list_item_1,Treenilista.getInstance().getTreenilista()));
+
+
+        treeniTyyppi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.d(TAG, "onItemClick(" + i + ")");
+            }
+        });
     }
 }
-     /*   treenityyppi.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView <?> adapterView, View view, int i, long l){
-                Log.d(TAG, "onItemClick(" + i + ")");
-                Intent nextActivity = new Intent(MainActivity.this, Main2Activity.class);
-                nextActivity.putExtra("presidenttiIndeksi", i);
-                startActivity(nextActivity);
-            }
-        } );
-        */
 
 
