@@ -4,7 +4,6 @@
         <item>yleinen</item>
         <item>jalkapäivä</item>
         <item>yläkroppa</item>
-
-
     </string-array>
+    <string name="uusi_merkinta_button">Uusi merkintä</string>
 </resources>

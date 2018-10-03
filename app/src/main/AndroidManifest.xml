@@ -16,6 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".Merkinta" />
+        <activity android:name=".Diagrammi" />
+        <activity android:name=".Paivakirja"></activity>
     </application>
 
 </manifest>
