@@ -1,9 +1,26 @@
 <resources>
     <string name="app_name">Loppu projekti</string>
-    <string-array name="Treenimuoto">
-        <item>yleinen</item>
-        <item>jalkapäivä</item>
-        <item>yläkroppa</item>
+    <string-array name="treeniNimi">
+        <item>Jalkaprässi</item>
+        <item>Hauiskääntö</item>
+        <item>Pystypunnerrus</item>
+        <item>Askelkyykky</item>
+        <item>Maastaveto</item>
+        <item>Vatsarutistukset</item>
     </string-array>
     <string name="uusi_merkinta_button">Uusi merkintä</string>
+    <string name="uusi_merkinta">Uusi merkintä</string>
+    <string name="paivamaara">Päivämäärä</string>
+    <string name="sarjat">Sarjat</string>
+    <string name="paivamaara_teksti">Päivämäärä:</string>
+    <string name="sarjat_teksti">Sarjat:</string>
+    <string name="toistot_teksti">Toistot:</string>
+    <string name="toistot_syota">Toistot</string>
+    <string name="kilot_teksti">Kilot:</string>
+    <string name="syota_paivamaara">Syötä päivämäärä</string>
+    <string name="syota_sarjojenmaara">Syötä sarjojen määrä</string>
+    <string name="syota_toistojen_maara">Syötä toistojen määrä</string>
+    <string name="painot_teksti">Painot:</string>
+    <string name="syota_painot_kg">Syötä liikkeessä käytetyt painot (kg)</string>
+    <string name="lisaa_treeni_btn">Lisää treeni</string>
 </resources>
