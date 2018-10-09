@@ -79,6 +79,10 @@ public class MerkintaActivity extends AppCompatActivity {
 
 
                 break;
+
+            case R.id.tallennusBtn:
+
+
         }
     }
 }

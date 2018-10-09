@@ -45,9 +45,5 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-    /*
-    public void buttonPressed(View view) {
-        Intent nextActivity = new Intent(getApplicationContext(), uusi_merkinta.class);
-        startActivity(nextActivity);
-    }*/
+
 }
