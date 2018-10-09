@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
            @Override
            public void onClick(View v) {
-               Intent nextActivity = new Intent(MainActivity.this, Merkinta.class);
+               Intent nextActivity = new Intent(MainActivity.this, MerkintaActivity.class);
                startActivity(nextActivity);
            }
        });
