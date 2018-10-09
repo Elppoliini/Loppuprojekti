@@ -1,27 +1,27 @@
 package com.example.loppuprojekti;
 
-import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
-
-import com.github.mikephil.charting.charts.BarChart;
-import com.github.mikephil.charting.components.AxisBase;
-import com.github.mikephil.charting.components.XAxis;
-import com.github.mikephil.charting.data.BarData;
-import com.github.mikephil.charting.data.BarDataSet;
-import com.github.mikephil.charting.data.BarEntry;
-import com.github.mikephil.charting.formatter.IAxisValueFormatter;
-import com.github.mikephil.charting.utils.ColorTemplate;
-
-import java.lang.reflect.Array;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
+        import android.support.v7.app.AppCompatActivity;
+        import android.os.Bundle;
+/*
+        import com.github.mikephil.charting.charts.BarChart;
+        import com.github.mikephil.charting.components.AxisBase;
+        import com.github.mikephil.charting.components.XAxis;
+        import com.github.mikephil.charting.data.BarData;
+        import com.github.mikephil.charting.data.BarDataSet;
+        import com.github.mikephil.charting.data.BarEntry;
+        import com.github.mikephil.charting.formatter.IAxisValueFormatter;
+        import com.github.mikephil.charting.utils.ColorTemplate;
+*/
+        import java.lang.reflect.Array;
+        import java.text.ParseException;
+        import java.text.SimpleDateFormat;
+        import java.util.ArrayList;
+        import java.util.Calendar;
+        import java.util.Date;
 
 public class Diagrammi extends AppCompatActivity {
 
-    BarChart barChart;
+ /*   BarChart barChart;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,5 +93,7 @@ public class Diagrammi extends AppCompatActivity {
             return mValues[(int)value];
         }
     }
-
+*/
 }
+
+

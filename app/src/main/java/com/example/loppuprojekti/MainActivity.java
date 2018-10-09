@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 
+
 public class MainActivity extends AppCompatActivity {
 
     @Override
@@ -14,18 +15,18 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-       Button button = (Button) findViewById(R.id.uusiMerkintaBtn);
-       button.setOnClickListener(new View.OnClickListener(){
+        Button button = (Button) findViewById(R.id.uusiMerkintaBtn);
+        button.setOnClickListener(new View.OnClickListener() {
 
-           @Override
-           public void onClick(View v) {
-               Intent nextActivity = new Intent(MainActivity.this, MerkintaActivity.class);
-               startActivity(nextActivity);
-           }
-       });
+            @Override
+            public void onClick(View v) {
+                Intent nextActivity = new Intent(MainActivity.this, MerkintaActivity.class);
+                startActivity(nextActivity);
+            }
+        });
 
         Button button2 = (Button) findViewById(R.id.paivakirjaBtn);
-        button2.setOnClickListener(new View.OnClickListener(){
+        button2.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -35,7 +36,7 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button button3 = (Button) findViewById(R.id.diagrammiBtn);
-        button3.setOnClickListener(new View.OnClickListener(){
+        button3.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {

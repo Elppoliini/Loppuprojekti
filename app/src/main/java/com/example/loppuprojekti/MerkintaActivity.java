@@ -11,13 +11,17 @@ import android.widget.AdapterView.OnItemSelectedListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class MerkintaActivity extends AppCompatActivity {
     String TAG = "com.example.loppuprojekti";
+    Treenilista treenit = new Treenilista();
 
 
     @Override
@@ -35,9 +39,9 @@ public class MerkintaActivity extends AppCompatActivity {
         Button lisaatreeni = (Button) findViewById(R.id.lisaa_treeni_btn);
 
 
-        }
+    }
 
-    public void buttonPress (View v){
+    public void buttonPress(View v) {
         Spinner treenispinneri;
         treenispinneri = findViewById(R.id.spinner);
         switch (v.getId()) {
@@ -49,17 +53,29 @@ public class MerkintaActivity extends AppCompatActivity {
                 EditText sarjanakym = (EditText) findViewById(R.id.Sarjatkentta);
                 EditText toistonakym = (EditText) findViewById(R.id.toistotkentta);
                 EditText kilotnakym = (EditText) findViewById(R.id.kilotkentta);
+                EditText pmnakym = (EditText) findViewById(R.id.pmkentta);
 
-                String sarjanakyma = sarjanakym.getText().toString();
-                String toistonakyma = toistonakym.getText().toString();
-                String kilotnakyma = kilotnakym.getText().toString();
+                int sarjanakyma = Integer.parseInt(sarjanakym.getText().toString());
+                int toistonakyma = Integer.parseInt(toistonakym.getText().toString());
+                int kilotnakyma = Integer.parseInt(kilotnakym.getText().toString());
+                String pmnakyma = pmnakym.getText().toString();
+                String treeninNimi = treenispinneri.getSelectedItem().toString();
 
-
-                Treenit treeniOlio = new Treenit(treenispinneri.setOnItemSelectedListener(this),
+                Treenit treeniOlio = new Treenit(treeninNimi,
                         sarjanakyma, toistonakyma,
                         kilotnakyma);
-                Treenilista treenit = new Treenilista();
-                treenit.lisääTreeni(treeniOlio);
+
+                treenit.lisaaTreeni(treeniOlio);
+
+                ArrayAdapter lvadapter = new ArrayAdapter<Treenit>(this,
+                        android.R.layout.simple_list_item_1, treenit.getTreenilista());
+
+                ListView lv = findViewById(R.id.paivan_treenit);
+
+                lv.setAdapter(lvadapter);
+                lvadapter.notifyDataSetChanged();
+
+                TallennetutTreenit.getInstance().getTallennetutTreenitMap().put(pmnakyma, treenit);
 
 
                 break;
