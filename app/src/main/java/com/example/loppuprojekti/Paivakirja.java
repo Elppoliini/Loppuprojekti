@@ -41,9 +41,6 @@ public class Paivakirja extends AppCompatActivity {
         //KÄY HASHMAP LÄPI JA ->
         //LISÄÄ SEM SISÄLTÖ NÄKYVIIN!
 
-        HashMap<String, Treenilista> kikki = TallennetutTreenit.getInstance().getTallennetutTreenitMap();
-        for (Map.Entry m : kikki.entrySet()) {
-            Log.d("toimii", "ole kiltti");
 
             Set<Entry<String, Treenilista>> entrySet = kikki.entrySet();
             ArrayList<Entry<String, Treenilista>> listOfEntry = new ArrayList<>(entrySet);
