@@ -3,11 +3,14 @@ package com.example.loppuprojekti;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ListView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
@@ -20,6 +23,11 @@ public class Paivakirja extends AppCompatActivity {
         setContentView(R.layout.activity_paivakirja);
 
 
+        HashMap <String,Treenilista> kikki = TallennetutTreenit.getInstance().getTallennetutTreenitMap();
+        for(Map.Entry m:kikki.entrySet()) {
+            Log.d("toimii","ole kiltti");
+
+        }
         //TÄMÄ HAKEE HASHMAPIN
         TallennetutTreenit.getInstance().getTallennetutTreenitMap();
         //TallennetutTreenit.getInstance().getTallennetutTreenitMap();
