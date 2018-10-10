@@ -42,7 +42,7 @@ public class Treenit {
 
     @Override
     public String toString() {
-        return nimi;
+        return "Liike: " + nimi + "\n" + "Sarjat: " + sarjat + "\n" + "Toistot: " + toistot + "\n" + "Kilot: " + kilot + "kg";
     }
 }
 

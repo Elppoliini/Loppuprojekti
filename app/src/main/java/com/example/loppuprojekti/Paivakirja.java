@@ -79,7 +79,7 @@ public class Paivakirja extends AppCompatActivity {
             public void onItemClick(AdapterView <?> adapterView, View view, int i, long l){
                 Log.d(TAG, "onItemClick(" + i + ")");
                 Intent nextActivity = new Intent(Paivakirja.this, Paivan_treenin_tiedotActivity.class);
-                nextActivity.putExtra("presidenttiIndeksi", i);
+                nextActivity.putExtra("TreenilistaIndeksi", i);
                 startActivity(nextActivity);
             }
         } );

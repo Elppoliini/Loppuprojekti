@@ -19,6 +19,7 @@
         <activity android:name=".MerkintaActivity" />
         <activity android:name=".Diagrammi" />
         <activity android:name=".Paivakirja"></activity>
+        <activity android:name=".Paivan_treenin_tiedotActivity"></activity>
     </application>
 
 </manifest>
