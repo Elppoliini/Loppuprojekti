@@ -189,13 +189,13 @@
         android:hint="@string/syota_toistojen_maara"
         android:inputType="number"
         android:textSize="12sp"
-        app:layout_constraintBottom_toTopOf="@+id/kilotkentta1"
+        app:layout_constraintBottom_toTopOf="@+id/kilotkentta"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/textView5"
         app:layout_constraintTop_toBottomOf="@+id/Sarjatkentta" />
 
     <EditText
-        android:id="@+id/kilotkentta1"
+        android:id="@+id/kilotkentta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="36dp"

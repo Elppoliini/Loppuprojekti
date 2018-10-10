@@ -17,6 +17,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
@@ -28,6 +31,7 @@ public class MerkintaActivity extends AppCompatActivity {
     String TAG = "com.example.loppuprojekti";
     Treenilista treenit = new Treenilista();
     Button tallennaJaPoistu = findViewById(R.id.tallennusBtn);
+
 
 
     @Override
