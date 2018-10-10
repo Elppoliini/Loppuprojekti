@@ -14,9 +14,8 @@ import com.google.gson.reflect.TypeToken;
 
 import java.util.HashMap;
 
-
+//Luodaan pääluokka, josta siirrtytään kaikkiin ohjelman näkymiin
 public class MainActivity extends AppCompatActivity {
-
 
 
     @Override
@@ -24,15 +23,21 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        // Luodaan painike jolla siirrytään uuden merkinnän tekoon
+
         Button button = (Button) findViewById(R.id.uusiMerkintaBtn);
         button.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
+
+                //Painiketta painamalla uusi aktiviteetti käynnistyy
                 Intent nextActivity = new Intent(MainActivity.this, MerkintaActivity.class);
                 startActivity(nextActivity);
             }
         });
+
+        // Painike päiväkirjaan siirtymistä varten
 
         Button button2 = (Button) findViewById(R.id.paivakirjaBtn);
         button2.setOnClickListener(new View.OnClickListener() {
@@ -43,6 +48,8 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(nextActivity);
             }
         });
+
+        // Painike Diagrammiin siirtymistä varten
 
         Button button3 = (Button) findViewById(R.id.diagrammiBtn);
         button3.setOnClickListener(new View.OnClickListener() {

@@ -26,9 +26,10 @@ import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
+// Luodaan luokka MerkintaActivity jossa toteutetaan kaikki activity_merkinnan koodi
 public class MerkintaActivity extends AppCompatActivity {
-    String TAG = "com.example.loppuprojekti";
+
+    // Luodaan Treenilista treenit, johon tallentuvat näkymässä lisätyt liikkeet ja niiden tiedot
     Treenilista treenit = new Treenilista();
 
     @Override
@@ -36,6 +37,9 @@ public class MerkintaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merkinta);
 
+        /*Näkymän auetessa luodaan Spinner (pudotusvalikko), josta voi valita mistä treenistä merkinnän tekee.
+        * Tälle luodaan oma adapteri jolla asennetaan pudotusvalikon näkymä*/
+        /* Tarkasta tämä kohta!
         Gson gson = new Gson();
         String hashMapString = gson.toJson(TallennetutTreenit.getInstance().getTallennetutTreenitMap());
 
@@ -52,8 +56,7 @@ public class MerkintaActivity extends AppCompatActivity {
 
 
         java.lang.reflect.Type type = new TypeToken<HashMap<String, String>>() {
-        }.getType();
-        HashMap<String, String> testHashMap2 = gson.fromJson(storedHashMapString, type);
+        }.getType(); */
 
 
         Spinner treenispinneri;
@@ -67,56 +70,69 @@ public class MerkintaActivity extends AppCompatActivity {
 
 
     }
-
+    //Tehdään metodi, jota käytetään kun näkymässä olevia painikkeita käytetään
     public void buttonPress(View v) {
         Spinner treenispinneri;
         treenispinneri = findViewById(R.id.spinner);
         switch (v.getId()) {
 
+            //Lisätään metodiin tapaus, joka toteutuu kun Lisää treeni painiketta painetaan
             case R.id.lisaa_treeni_btn:
                 // lisää 1
                 Log.i("Lisätyt:treenit", "Treeni lisätty");
 
+                //Etsitään näkymässä olevat tekstikentät niiden id:eiden avulla
                 EditText sarjanakym = (EditText) findViewById(R.id.Sarjatkentta);
                 EditText toistonakym = (EditText) findViewById(R.id.toistotkentta);
                 EditText kilotnakym = (EditText) findViewById(R.id.kilotkentta);
                 EditText pmnakym = (EditText) findViewById(R.id.pmkentta);
 
+                //Muutetaan tekstikentät haluttuun muotoon
                 int sarjanakyma = Integer.parseInt(sarjanakym.getText().toString());
                 int toistonakyma = Integer.parseInt(toistonakym.getText().toString());
                 int kilotnakyma = Integer.parseInt(kilotnakym.getText().toString());
                 String pmnakyma = pmnakym.getText().toString();
                 String treeninNimi = treenispinneri.getSelectedItem().toString();
 
+
+                // luodaan treeniOlio, joka saa arvoikseen Spinnerissä sen hetkellä näkyvän liikkeen nimen,
+                // käyttäjän tietoihin syöttämät tiedot sarjoista, toistoista ja liikkeessä käyetyistä painoista
                 Treenit treeniOlio = new Treenit(treeninNimi,
                         sarjanakyma, toistonakyma,
                         kilotnakyma);
 
+                //Lisätään treeniOlio alussa luotuun treenit listaan
                 treenit.lisaaTreeni(treeniOlio);
 
+                //Luodaan adapteri jonka avulla saadaan treenit lista näkymään käyttäjälle
                 ArrayAdapter lvadapter = new ArrayAdapter<Treenit>(this,
                         android.R.layout.simple_list_item_1, treenit.getTreenilista());
 
                 ListView lv = findViewById(R.id.paivan_treenit);
 
                 lv.setAdapter(lvadapter);
+                //Huomautetaan adapterille että alussatyhjänä ollut Listview näkymä
+                // on kokenut muutoksia, jolloin se päivittää näkymän
                 lvadapter.notifyDataSetChanged();
 
-                //Poistettu lisäys
+
 
 
                 break;
 
+                // Lisätään tapaus kun Tallenna ja poistu painiketta käytetään
             case R.id.tallennusBtn:
+                //Luodaan tallennaJaPoistu painike ja muokataan päivämäärä tekstikenttään syötetyn päivämäärän tiedot Stringiksi
                 Button tallennaJaPoistu = findViewById(R.id.tallennusBtn);
                 EditText pmnakym = (EditText) findViewById(R.id.pmkentta);
                 String pmnakyma = pmnakym.getText().toString();
 
-                //Fiksaa
-                TallennetutTreenit.getInstance().lisaaTallennus("1", treenit);
+                //Lisätään singleton Hashmappiin avain (syötetty päivämäärä, ja päivän treenit Arraylist
+                TallennetutTreenit.getInstance().lisaaTallennus(pmnakyma, treenit);
 
                 tallennaJaPoistu.setOnClickListener(new View.OnClickListener() {
 
+                    // Asetetaan että painiketta painaessa näkymä siirtyy takaisin etusivulle ( activity_main)
                     @Override
                     public void onClick(View v) {
                         Intent nextActivity = new Intent(MerkintaActivity.this, MainActivity.class);
