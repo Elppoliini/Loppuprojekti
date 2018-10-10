@@ -1,5 +1,7 @@
 package com.example.loppuprojekti;
 
+import android.util.Log;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,6 +21,7 @@ public class Treenilista {
     }
 
     public void lisaaTreeni(Treenit treeni) {
+        Log.d("treeni", treeni.getNimi()+ " " + treeni.getkilot()+ " " + treeni.gettoistot());
         treenit.add(treeni);
     }
 

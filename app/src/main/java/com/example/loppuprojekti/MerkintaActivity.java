@@ -102,13 +102,16 @@ public class MerkintaActivity extends AppCompatActivity {
                 lv.setAdapter(lvadapter);
                 lvadapter.notifyDataSetChanged();
 
-                TallennetutTreenit.getInstance().getTallennetutTreenitMap().put(pmnakyma, treenit);
+                //Poistettu lisäys
 
 
                 break;
 
             case R.id.tallennusBtn:
                 Button tallennaJaPoistu = findViewById(R.id.tallennusBtn);
+
+                //Fiksaa
+                TallennetutTreenit.getInstance().lisaaTallennus("1", treenit);
 
                 tallennaJaPoistu.setOnClickListener(new View.OnClickListener() {
 
