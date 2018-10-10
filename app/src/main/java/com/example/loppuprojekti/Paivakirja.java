@@ -3,6 +3,7 @@ package com.example.loppuprojekti;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
@@ -33,7 +34,7 @@ public class Paivakirja extends AppCompatActivity {
         //TallennetutTreenit.getInstance().getTallennetutTreenitMap();
 
 
-        //LUOT UUDEN HASHMAPIN!
+        }//LUOT UUDEN HASHMAPIN!
         //LISÄÄT PARI SAMANLAISTA SISÄLTÖÄ KUIN LISTASSA OLISI OIKEASTI
 
 
@@ -58,3 +59,6 @@ public class Paivakirja extends AppCompatActivity {
         }
     }
 }
+
+    }}
+
