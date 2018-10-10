@@ -1,6 +1,7 @@
 package com.example.loppuprojekti;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -14,7 +15,11 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.ObjectOutputStream;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -22,6 +27,7 @@ import java.util.List;
 public class MerkintaActivity extends AppCompatActivity {
     String TAG = "com.example.loppuprojekti";
     Treenilista treenit = new Treenilista();
+    Button tallennaJaPoistu = findViewById(R.id.tallennusBtn);
 
 
     @Override
@@ -82,7 +88,18 @@ public class MerkintaActivity extends AppCompatActivity {
 
             case R.id.tallennusBtn:
 
+                tallennaJaPoistu.setOnClickListener(new View.OnClickListener() {
 
+                    @Override
+                    public void onClick(View v) {
+                        Intent nextActivity = new Intent(MerkintaActivity.this, MainActivity.class);
+                        startActivity(nextActivity);
+
+
+                    }
+                });
         }
+
     }
+
 }
