@@ -33,7 +33,7 @@ public class Paivakirja extends AppCompatActivity {
         TallennetutTreenit.getInstance().getTallennetutTreenitMap();
         //TallennetutTreenit.getInstance().getTallennetutTreenitMap();
 
-//kk
+//k
         }//LUOT UUDEN HASHMAPIN!
         //LISÄÄT PARI SAMANLAISTA SISÄLTÖÄ KUIN LISTASSA OLISI OIKEASTI
 
