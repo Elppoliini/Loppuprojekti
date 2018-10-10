@@ -9,7 +9,7 @@ import java.util.List;
 public class TallennetutTreenit {
 
     private HashMap<String, Treenilista> TallennetutTreenitMap = new HashMap<>();
-    Treenilista lista;
+
 
     private static final TallennetutTreenit singleton = new TallennetutTreenit();
 
@@ -30,9 +30,9 @@ public class TallennetutTreenit {
 
     public void lisaaTallennus(String avain, Treenilista lista) {
         TallennetutTreenitMap.put(avain, lista);
-        this.lista = lista;
 
-        Log.d("Tallennus", this.lista.getTreeni(0).getNimi());
+
+        Log.d("Tallennus", "Treenilista tallennettu");
     }
 
     public Treenilista getTreenilista(int i) {

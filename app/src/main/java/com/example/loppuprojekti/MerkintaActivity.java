@@ -109,6 +109,8 @@ public class MerkintaActivity extends AppCompatActivity {
 
             case R.id.tallennusBtn:
                 Button tallennaJaPoistu = findViewById(R.id.tallennusBtn);
+                EditText pmnakym = (EditText) findViewById(R.id.pmkentta);
+                String pmnakyma = pmnakym.getText().toString();
 
                 //Fiksaa
                 TallennetutTreenit.getInstance().lisaaTallennus("1", treenit);
