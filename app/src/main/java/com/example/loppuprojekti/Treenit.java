@@ -10,6 +10,7 @@ public class Treenit {
     private int toistot;
     private int kilot;
 
+
     //Luodaan Treenit konstruktori, joka saa parametrikseen nimen,
     // sarjojen lukumäärän, toistojen lukumäärän ja kilojen määrä joita on treenissä käytetty
     public Treenit (String nimi, int sarjat, int toistot, int kilot) {
