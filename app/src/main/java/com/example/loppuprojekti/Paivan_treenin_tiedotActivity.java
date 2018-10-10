@@ -17,6 +17,6 @@ public class Paivan_treenin_tiedotActivity extends AppCompatActivity {
         ((TextView) findViewById(R.id.nimiTextView)).setText(Presidenttilista.getInstance().getPresidentti(i).getNimi());
         ((TextView) findViewById(R.id.alkuvuosiTextView)).setText(String.valueOf(Presidenttilista.getInstance().getPresidentti(i).getAlkuvuosi()));
         ((TextView) findViewById(R.id.loppuvuosiTextView)).setText(String.valueOf(Presidenttilista.getInstance().getPresidentti(i).getLoppuvuosi()));
-        ((TextView) findViewById(R.id.kuvausTextView)).setText(Presidenttilista.getInstance().getPresidentti(i).getKuvaus());
-    } */
+        ((TextView) findViewById(R.id.kuvausTextView)).setText(Presidenttilista.getInstance().getPresidentti(i).getKuvaus()); */
+    }
 }
