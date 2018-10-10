@@ -47,8 +47,8 @@ public class Paivakirja extends AppCompatActivity {
 
 
         //LUOT UUDEN HASHMAPIN!
-        HashMap<String, Treenilista> kikki = TallennetutTreenit.getInstance().getTallennetutTreenitMap();
-        for (Map.Entry m : kikki.entrySet()) {
+        HashMap<String, Treenilista> hashMapOlio = TallennetutTreenit.getInstance().getTallennetutTreenitMap();
+        for (Map.Entry m : hashMapOlio.entrySet()) {
             Log.d("toimii", "ole kiltti");
 
         }
@@ -70,6 +70,8 @@ public class Paivakirja extends AppCompatActivity {
          */
         HashMap<String, Treenilista> hashMapOlio = TallennetutTreenit.getInstance().getTallennetutTreenitMap();
 
+    /*    Set<Entry<String, Treenilista>> entrySet = hashMapOlio.entrySet();
+        ArrayList<Entry<String, Treenilista>> listOfEntry = new ArrayList<>(entrySet); */
         /**
          * Testaillaan for loopin avulla että hashMapOlio toimii
          */
@@ -81,6 +83,7 @@ public class Paivakirja extends AppCompatActivity {
 
 //Getting Set of keys from HashMap
 
+        Set<String> keySet = hashMapOlio.keySet();
         //Haetaan avain setti HashMapista
         /**
          * haetaan hashMapolion avaimet ja luodaan niistä stringeistä muodostuva avain setti keyset

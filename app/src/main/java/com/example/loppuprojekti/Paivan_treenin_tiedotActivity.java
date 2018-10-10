@@ -30,6 +30,11 @@ public class Paivan_treenin_tiedotActivity extends AppCompatActivity {
         int i = b.getInt("TreenilistaIndeksi", 0);
         HashMap<String, Treenilista> hashMapOlio = TallennetutTreenit.getInstance().getTallennetutTreenitMap();
 
+
+
+        //((TextView) findViewById(R.id.nimiTextView)).setText(Presidenttilista.getInstance().getPresidentti(i).getNimi());
+        HashMap<String, Treenilista> hashMapOlio = TallennetutTreenit.getInstance().getTallennetutTreenitMap();
+
 /**
  * Luodaan Listiview Lv, jonka avulla käyttäjä näkee listan päiväkirja näkymstä valitsemansa päivämäärän treeneistä
  */
@@ -38,6 +43,9 @@ public class Paivan_treenin_tiedotActivity extends AppCompatActivity {
                 (this, android.R.layout.simple_list_item_1, ((Treenilista) hashMapOlio.values().toArray()[i]).getTreenilista()
                 ));
 
-
+        //((TextView) findViewById(R.id.nimiTextView)).setText(Presidenttilista.getInstance().getPresidentti(i).getNimi());
+       //((TextView) findViewById(R.id.alkuvuosiTextView)).setText(String.valueOf(Presidenttilista.getInstance().getPresidentti(i).getAlkuvuosi()));
+        //((TextView) findViewById(R.id.loppuvuosiTextView)).setText(String.valueOf(Presidenttilista.getInstance().getPresidentti(i).getLoppuvuosi()));
+        //((TextView) findViewById(R.id.kuvausTextView)).setText(Presidenttilista.getInstance().getPresidentti(i).getKuvaus());
     }
 }
