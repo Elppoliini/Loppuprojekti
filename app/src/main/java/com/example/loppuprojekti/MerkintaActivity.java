@@ -30,7 +30,7 @@ import java.util.List;
 public class MerkintaActivity extends AppCompatActivity {
     String TAG = "com.example.loppuprojekti";
     Treenilista treenit = new Treenilista();
-    Button tallennaJaPoistu = findViewById(R.id.tallennusBtn);
+
 
 
 
@@ -38,6 +38,24 @@ public class MerkintaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_merkinta);
+
+        Gson gson = new Gson();
+        String hashMapString = gson.toJson(TallennetutTreenit.getInstance().getTallennetutTreenitMap());
+
+
+        //save in shared prefs
+        SharedPreferences prefs = getSharedPreferences("test", MODE_PRIVATE);
+        SharedPreferences.Editor editor = prefs.edit();
+
+
+        editor.putString("hashString",hashMapString);
+        editor.apply();
+
+        //get from shared prefs
+        String storedHashMapString = prefs.getString("hashString", "oopsDintWork");
+        java.lang.reflect.Type type = new TypeToken<HashMap<String, String>>() {
+        }.getType();
+        HashMap<String, String> testHashMap2 = gson.fromJson(storedHashMapString, type);
 
         Spinner treenispinneri;
         treenispinneri = findViewById(R.id.spinner);
@@ -91,7 +109,7 @@ public class MerkintaActivity extends AppCompatActivity {
                 break;
 
             case R.id.tallennusBtn:
-
+                Button tallennaJaPoistu = findViewById(R.id.tallennusBtn);
                 tallennaJaPoistu.setOnClickListener(new View.OnClickListener() {
 
                     @Override

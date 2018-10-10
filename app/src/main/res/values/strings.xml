@@ -23,4 +23,9 @@
     <string name="painot_teksti">Painot:</string>
     <string name="syota_painot_kg">Syötä liikkeessä käytetyt painot (kg)</string>
     <string name="lisaa_treeni_btn">Lisää treeni</string>
+    <string name="tallenna_ja_poistu">Tallenna ja poistu</string>
+    <string name="treenipaivakirjaTeksti">Treenipäiväkirja</string>
+    <string name="uusi_merkinta_teksti">Uusi merkintä</string>
+    <string name="paivakirja_teksti">Päiväkirja</string>
+    <string name="diagrammi_teksti">Diagrammi</string>
 </resources>

@@ -135,7 +135,7 @@
         android:layout_marginEnd="6dp"
         android:layout_marginStart="5dp"
         android:layout_marginTop="85dp"
-        android:text="Tallenna ja poistu"
+        android:text="@string/tallenna_ja_poistu"
         android:onClick="buttonPress"
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="parent"
