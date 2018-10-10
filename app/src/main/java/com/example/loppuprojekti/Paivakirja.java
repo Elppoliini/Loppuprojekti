@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
+import java.util.HashMap;
+
 public class Paivakirja extends AppCompatActivity {
 
     @Override
@@ -11,7 +13,12 @@ public class Paivakirja extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_paivakirja);
 
+
+
+
+
         //TÄMÄ HAKEE HASHMAPIN
+        TallennetutTreenit.getInstance().getTallennetutTreenitMap();
         //TallennetutTreenit.getInstance().getTallennetutTreenitMap();
 
 

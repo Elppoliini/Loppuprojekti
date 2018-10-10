@@ -20,8 +20,35 @@ public class TallennetutTreenit {
     }
 
     private TallennetutTreenit() {
+
+        /* Testi
+        Treenit treeni1 = new Treenit("Juoksu", 2, 5, 6);
+        Treenit treeni2 = new Treenit("Punnerrus", 2, 3, 4);
+        Treenit treeni3 = new Treenit("Nyrkkeily", 2, 7, 9);
+        Treenit treeni4 = new Treenit("Miekkailu", 0, 9, 8);
+        Treenilista lista1 = new Treenilista();
+        Treenilista lista2 = new Treenilista();
+        Treenilista lista3 = new Treenilista();
+
+
+        lista1.lisaaTreeni(treeni1);
+        lista1.lisaaTreeni(treeni2);
+
+        lista2.lisaaTreeni(treeni2);
+        lista2.lisaaTreeni(treeni3);
+
+        lista3.lisaaTreeni(treeni1);
+        lista3.lisaaTreeni(treeni2);
+        lista3.lisaaTreeni(treeni3);
+        lista3.lisaaTreeni(treeni4); */
+
     // Luodaan HashMap TallennetutTreenitMap, johon kaikki käyttäjän tallentamat treenimerkinnät tallentuvat
         TallennetutTreenitMap = new HashMap<>();
+
+
+      /*  TallennetutTreenitMap.put("13.07", lista1);
+        TallennetutTreenitMap.put("12.01",lista2);
+        TallennetutTreenitMap.put("08.08", lista3); */
 
     }
 
