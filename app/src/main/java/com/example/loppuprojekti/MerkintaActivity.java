@@ -31,9 +31,6 @@ public class MerkintaActivity extends AppCompatActivity {
     String TAG = "com.example.loppuprojekti";
     Treenilista treenit = new Treenilista();
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -110,6 +107,7 @@ public class MerkintaActivity extends AppCompatActivity {
 
             case R.id.tallennusBtn:
                 Button tallennaJaPoistu = findViewById(R.id.tallennusBtn);
+                
                 tallennaJaPoistu.setOnClickListener(new View.OnClickListener() {
 
                     @Override

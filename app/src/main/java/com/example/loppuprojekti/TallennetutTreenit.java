@@ -9,6 +9,7 @@ public class TallennetutTreenit {
     private HashMap<String, Treenilista> TallennetutTreenitMap = new HashMap<>();
     private static final TallennetutTreenit singleton = new TallennetutTreenit();
 
+
     public static TallennetutTreenit getInstance() {
         return singleton;
     }
