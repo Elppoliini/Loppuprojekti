@@ -19,6 +19,10 @@ package com.example.loppuprojekti;
         import java.util.Calendar;
         import java.util.Date;
 
+/**
+ * Luodaan luokka diagrammi (activity), joka perii luokan AppCompatActivityn ominaisuudet.
+ * Diagrammi on sovelluksessä näkymä jossa voi seurata treenihistoriastaan diagrammia.
+ */
 public class Diagrammi extends AppCompatActivity {
 
  /*   BarChart barChart;
