@@ -15,6 +15,7 @@ import java.io.ObjectOutputStream;
  * vaikka sovellus suljettaisiin
  *
  * Lähde: https://androidresearch.wordpress.com/2013/04/07/caching-objects-in-android-internal-storage/
+ *@author Elisa Urjansson
  */
 public final class Sisainen_muisti {
 

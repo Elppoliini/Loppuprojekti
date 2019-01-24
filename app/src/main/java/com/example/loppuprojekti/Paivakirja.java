@@ -23,6 +23,8 @@ import java.util.Map;
 
 /**
  * Luodaan luokka paivakirja (Activity), jossa voidaan tarkastella käyttäjän tekemiä merkintöjä eri päiviltä.
+ * @author Walter Ruoppa
+ * @author Elisa Urjansson
  */
 public class Paivakirja extends AppCompatActivity {
 

@@ -3,6 +3,7 @@ package com.example.loppuprojekti;
 /**
  *Luodaan Treenit luokka, joka kuvaa harjoituksissa tehtyä liikettä,
  *  siinä liikkeessä tehtyjen sarjojen määrää, toistoja, sekä liikkeessä käytettyjä painoja
+ *  @author Elisa Urjansson
  */
 public class Treenit {
 

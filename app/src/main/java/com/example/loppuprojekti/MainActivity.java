@@ -20,6 +20,7 @@ import java.util.HashMap;
  * Luodaan luokka MainActivity, joka perii luokan AppCompatActivity ominaisuudet
  * MainActivity on sovelluksen "etusivu" joka tulee näkyviin, kun sovelluksen käynnistää.
  * Sieltä siirrytään sovelluksen muihin näkyviin
+ * @author Elisa Urjansson
  */
 public class MainActivity extends AppCompatActivity {
 

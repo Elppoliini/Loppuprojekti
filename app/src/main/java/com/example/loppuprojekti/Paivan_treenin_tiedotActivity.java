@@ -13,6 +13,7 @@ import java.util.HashMap;
  * Luodaan luokka Paivan_treenin_tiedotActivty, joka perii AppCompatActivityn
  * Luokkaa käytetään näyttämään näkymää, kun tietty päiväkirjasta on valitu tietty päivä ja halutaan
  * näyttää sinä päivänä tehdyt treenit
+ * @author Elisa Urjansson
  */
 public class Paivan_treenin_tiedotActivity extends AppCompatActivity {
     /**

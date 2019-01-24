@@ -22,6 +22,7 @@ package com.example.loppuprojekti;
 /**
  * Luodaan luokka diagrammi (activity), joka perii luokan AppCompatActivityn ominaisuudet.
  * Diagrammi on sovelluksessä näkymä jossa voi seurata treenihistoriastaan diagrammia.
+ * @author Aaro Yli-Öyrä
  */
 public class Diagrammi extends AppCompatActivity {
 

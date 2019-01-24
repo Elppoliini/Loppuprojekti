@@ -9,6 +9,7 @@ import java.util.List;
 
 /**
  * Luodaan luokka Treenilista, johon tallentuu merkintään lisätyt treenit, joita voidaan hakea myöhemmin päiväkirjassa
+ * @author Elisa Urjansson
  */
 public class Treenilista {
 

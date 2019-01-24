@@ -29,7 +29,7 @@ import java.util.List;
 
 /**
  * Luodaan luokka MerkintaActivity, jossa luodaan uusi päiväkirjamerkintä.
- *
+ *@author Elisa Urjansson
  */
 public class MerkintaActivity extends AppCompatActivity {
 

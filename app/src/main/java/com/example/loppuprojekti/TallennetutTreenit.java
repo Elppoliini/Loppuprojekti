@@ -15,6 +15,7 @@ import java.util.List;
  * johon tiedot tallentuvat kun käyttäjä tallentaa uuden merkinnän.
  * Avainsanaksi HashMapissa laitamme käyttäjän syöttämän päivämäärän ja arvopariksi treenilistan
  * ( eli kaikki treenit jota käyttäjä on merkintäänsä lisännyt)
+ * @author Elisa Urjansson
  */
 public class TallennetutTreenit {
     /**
